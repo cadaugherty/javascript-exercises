@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const palindromes = function (stringTest) {
+    stringTest = stringTest.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    console.log(stringTest);
+    let stringArray = stringTest.split("");
+    console.log(stringArray);
+    stringArray.splice()
+
+    let backwardsString = [];
+    for(i = 0; i < stringArray.length; i++){
+        if(stringArray[i] == " "){
+            stringArray.splice(i, 1);
+        }
+    }
+    for(i=stringArray.length-1; i>=0; i--){
+        backwardsString.push(stringArray[i]);
+    };
+    
+    string1 = stringArray.join("");
+    string2 = backwardsString.join("");
+    string1 = string1.toLowerCase();
+    string2 = string2.toLowerCase();
+    console.log(string1);
+    console.log(string2);
+   
+    if(string1 === string2){
+        return true;
+    } else{
+        return false;
+    };
+   
+};
+console.log(palindromes("Animal loots foliated detail of stool lamina."));
+    </script>
+</body>
+</html>
